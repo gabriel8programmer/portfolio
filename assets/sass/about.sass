@@ -1,0 +1,75 @@
+
+@use "variables"
+@use "mixins"
+
+#about
+
+    article
+        background: rgba(0, 0, 0, .7)
+        padding:2rem 3rem
+        p
+            text-align: center
+            max-width: 90%
+            width: 50%
+            margin: 2rem auto
+            font-size: variables.$text-sm
+            color: variables.$text-secondary
+            font-weight: 400
+            line-height: 1.5rem
+
+    #skills
+        padding: 3rem
+
+        h3 
+            font-size: variables.$text-lg
+            text-align: center
+            color: variables.$text-secondary
+            font-weight: 400
+            margin-bottom: 3rem
+
+        #container-tecs
+            display: flex
+            align-items: center
+
+            #description-tecnology,
+            #tecnologies
+                width: 50%
+
+            #tecnologies
+                border-right: 1px solid variables.$secondary                
+
+                ul
+                    display: grid
+                    grid-template-columns: repeat(3, 140px)
+                    gap: 1rem
+
+                    .tecnology
+                        @include mixins.align-center()
+                        width: 140px
+                        height: 140px
+                        padding: 1.5rem
+                        background: variables.$secondary
+                        border-radius: 20px
+                        transition: .5s
+                        cursor: pointer
+
+                        &:hover
+                            transform: scale(1.1)
+
+            #description-tecnology
+
+                ul
+                    li
+                        .description
+
+                            h3
+                                font-size: variables.$text-md
+                                margin-bottom: 1.5rem
+                                text-transform: uppercase
+                            p
+                                width: 70%
+                                color: variables.$text-secondary
+                                margin: 0 auto
+                                line-height: 1.5rem
+                                font-weight: variables.$text-medium
+                                margin-bottom: 1rem

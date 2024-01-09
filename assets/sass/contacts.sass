@@ -1,0 +1,48 @@
+
+@use "variables"
+@use "mixins"
+
+#contacts
+
+    #container-contacts
+        padding: 3rem
+
+        ul
+            @include mixins.align-center
+            
+            flex-wrap: wrap
+            gap: 1.5rem
+
+            li
+                a
+                    display: flex
+                    flex-direction: column
+                    align-items: center
+                    justify-content: space-between
+                    width: 250px
+                    height: 220px
+                    background: white
+                    border-radius: 20px
+                    padding: 1.5rem
+                    transition: .5s
+                    
+                    &:hover
+                        transform: scale(1.1)
+
+                img
+                    width: 100px
+                    text-align: center
+
+                strong
+                    color: variables.$text-tertiary
+                    font-weight: variables.$text-bold
+                    font-size: variables.$text-md
+                    text-transform: uppercase
+                    text-align: center
+
+                span
+                    color: variables.$text-tertiary
+                    font-weight: variables.$text-medium
+                    text-align: center
+                    width: 100%
+                    word-break: break-all

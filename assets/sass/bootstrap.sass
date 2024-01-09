@@ -1,13 +1,64 @@
+@use "variables"
 
 //reset
-* 
+*
     padding: 0
     margin: 0
     box-sizing: border-box
     text-decoration: none
     font-family: "Roboto", sans-serif
+    color: variables.$text-primary
+    font-size: variables.$text-sm
+    font-weight: variables.$text-light
+    list-style-type: none
 
-//body
 body
-    background: black
-    color: #fff
+    background: url("../img/background.png") no-repeat
+    background-size: cover
+    background-attachment: fixed
+    scroll-behavior: smooth
+
+/*utils*/
+.container
+    max-width: variables.$max-width
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+
+.hide
+    display: none
+    opacity: 0
+
+.container-btn
+    trasition: .5s
+    display: inline-block
+
+.container-btn:hover
+    cursor: pointer
+
+    .btn
+        opacity: .8
+
+.btn
+    padding: 1rem 2rem
+    border-radius: 20px
+    color: variables.$text-primary
+    font-size: variables.$text-sm
+    font-weight: variables.$text-bold
+    text-transform: uppercase
+    display: inline-block
+    transition: .5s
+
+.btn.btn-primary
+    background: variables.$primary
+
+.title-section
+    width: 100%
+    padding: 3rem 0
+    font-size: variables.$text-xl
+    text-transform: uppercase
+    text-align: center
+    border-bottom: 1px solid variables.$secondary
+    color: variables.$text-secondary
+    font-weight: variables.$text-bold
+    background: rgba(0, 0, 0, .7)
