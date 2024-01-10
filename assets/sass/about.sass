@@ -9,7 +9,6 @@
         padding:2rem 3rem
         p
             text-align: center
-            max-width: 90%
             width: 50%
             margin: 2rem auto
             font-size: variables.$text-sm
@@ -33,14 +32,14 @@
 
             #description-tecnology,
             #tecnologies
-                width: 50%
+                flex: 1
 
             #tecnologies
-                border-right: 1px solid variables.$secondary                
+                padding: 3rem
 
                 ul
                     display: grid
-                    grid-template-columns: repeat(3, 140px)
+                    grid-template-columns: repeat(3, 1fr)
                     gap: 1rem
 
                     .tecnology
@@ -56,11 +55,44 @@
                         &:hover
                             transform: scale(1.1)
 
+                        i
+                            color: #000
+                            font-size: 100px
+
+                        #html
+                            color: variables.$html-color
+                        
+                        #css
+                            color: variables.$css-color
+                        
+                        #js
+                            color: variables.$js-color
+                            background: #000
+                            border: px solid #000
+                        
+                        #bootstrap
+                            color: variables.$bootstrap-color
+
+                        #react
+                            color: variables.$react-color
+
+                        #sass
+                            color: variables.$sass-color
+
+                        #git
+                            color: variables.$git-color
+
+                        #github
+                            color: variables.$github-color
+
             #description-tecnology
 
                 ul
                     li
                         .description
+                            padding: 1rem
+                            border-radius: 20px
+                            background: rgba(0, 0, 0, .5)
 
                             h3
                                 font-size: variables.$text-md
